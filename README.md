@@ -1,6 +1,3 @@
-Here is your updated `README.md` file with the required screens and theme colors included:
-
-```markdown
 # 📱 **Student Companion – Learning and Rewards Platform**  
 
 ## 📝 **Project Overview**  
@@ -210,6 +207,3 @@ npm run dev
 ---
 
 **🚀 Let’s Build Something Great Together!** 💪🔥  
-```
-
-This version includes the screens and theme colors while keeping everything structured. Let me know if you need any more adjustments! 🚀
