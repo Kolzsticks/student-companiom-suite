@@ -1,13 +1,26 @@
-# 📱 Student Companion – Learning and Rewards Platform
+Here is your updated `README.md` file with the required screens and theme colors included:
 
-## 📝 Project Overview
-**Student Companion** is a mobile-first educational app that offers quiz competitions, wallet rewards, and user activity tracking. This MVP focuses on core functionalities like Google Authentication, quiz participation, and leaderboard tracking. The backend is powered by Django, and the admin dashboard is built with React and Tailwind CSS.
+```markdown
+# 📱 **Student Companion – Learning and Rewards Platform**  
+
+## 📝 **Project Overview**  
+**Student Companion** is a mobile-first educational app that offers quiz competitions, wallet rewards, and user activity tracking. This app integrates Google Authentication, Squad API for wallet management, and a Django backend. It also features a web-based admin dashboard for managing users and tracking quiz winners.  
 
 ---
 
-## 🚀 Project Repository Structure
-**Repository Name:** `student-companion-suite`
+## 🎨 **Application Theme Colors**  
+The app follows the **Bright Future** theme, designed to be youthful and motivational:  
 
+- **Primary:** `#4CAF50` (Green – Represents growth and success)  
+- **Secondary:** `#FF9800` (Orange – Warmth, creativity, and enthusiasm)  
+- **Accent:** `#03A9F4` (Sky Blue – Trust, clarity, and focus)  
+- **Background:** `#F5F5F5` (Light Gray – Soft, neutral canvas for content)  
+
+This theme creates a fun and motivating learning experience, especially for students.  
+
+---
+
+## 📂 **Project Structure**  
 ```
 student-companion-suite/
 ├── mobile-app/                # React Native Mobile App
@@ -17,70 +30,120 @@ student-companion-suite/
 
 ---
 
-## 👥 Team Members and Roles
+## 🖥️ **Screens & User Flow**  
 
-### **Akolade – Mobile Frontend Developer & Team Lead (React Native)**
-- Leads development and ensures smooth collaboration.
-- Implements **Google Authentication** using Appwrite.
-- Develops quiz participation and leaderboard functionalities.
-- Manages API integrations using **Axios**.
-
-### **Justin – Backend Developer (Django)**
-- Designs **Django REST API** for user authentication and quizzes.
-- Implements **Squad API** for wallet management.
-- Handles API security and performance optimization.
-
-### **Ade – Backend Developer (Django)**
-- Implements quiz logic, scoring, and leaderboard endpoints.
-- Manages winner tracking and notification system.
-- Ensures database efficiency and security.
-
-### **Sultan – Web Frontend Developer (React + Tailwind)**
-- Develops **Admin Dashboard** for user and quiz management.
-- Implements filtering, searching, and sorting for users.
-- Ensures admin security and user activity tracking.
+### 📱 **Mobile App Screens**  
+1. **Welcome Screen** – Introduction to the app with a motivational message  
+2. **Login/Signup** – Google Authentication using Appwrite  
+3. **Profile** – User details and profile settings  
+4. **Wallet** – View Squad API wallet balance and transaction history  
+5. **Savings** – Save and manage in-app earnings  
+6. **Quiz Lobby** – Available quizzes and upcoming live events  
+7. **Live Quiz** – Real-time quiz participation screen  
+8. **Quiz Result** – Performance summary after quiz completion  
+9. **Leaderboard** – Displays top performers based on quiz scores  
+10. **Achievements** – Badges and accomplishments for engagement  
 
 ---
 
-## 🔑 MVP Features
+## 🔑 **Key Features**  
 
-### 📱 Mobile App (React Native)
-- **Google Authentication** via Appwrite.
-- **Quiz Participation** with real-time scoring.
-- **Leaderboard** to display top performers.
-- **User Profiles** with past quiz results.
+### 🟡 **Mobile App (React Native)**  
+- **Google Authentication:** Users sign in using their Google accounts via Appwrite  
+- **Wallet Management:** Users can view their Squad wallet balance  
+- **Quiz Competitions:** Users can participate in quizzes  
+- **Leaderboard:** Displays top quiz performers  
+- **Profile Management:** Users can edit profiles and view achievements  
 
-### 🖥️ Backend API (Django)
-- **User Authentication** using JWT.
-- **Quiz Handling** with score calculations.
-- **Leaderboard Management** via API.
-- **Wallet Integration** (future enhancement).
+### 🟢 **Backend API (Django)**  
+- **User Management:** Create, update, and delete users  
+- **Wallet Integration (Squad API):** Automatically create wallets for users  
+- **Quiz Handling:** Create quizzes and store results  
+- **Leaderboard:** API to fetch top scorers  
+- **Admin Controls:** Endpoint for dashboard data  
+- **Security:** API authentication using JWT tokens  
 
-### 🧑‍💻 Admin Dashboard (React + Tailwind)
-- **User Management** with filtering & banning.
-- **Quiz Result Tracking** for performance monitoring.
-- **Admin Controls** for quiz and score adjustments.
-
----
-
-## 🏗️ Future Enhancements (Post-MVP)
-- **Wallet System Integration** using Squad API.
-- **Push Notifications** for quiz reminders and updates.
-- **Gamification Features** like badges and XP points.
-- **AI-Powered Quiz Suggestions** based on performance.
+### 🟠 **Admin Dashboard (React + Tailwind)**  
+- **User Analytics:** View user sign-ups and quiz performance  
+- **Quiz Results:** View recent quiz winners  
+- **Wallet Management:** View user balances  
+- **Admin Actions:** Ban users, reset scores, or award bonuses  
+- **Responsive Design:** Works on both mobile and desktop  
 
 ---
 
-## 💾 Development Setup
+## 🗂️ **API Endpoints Overview (Django)**  
 
-### 📱 Mobile App (React Native)
+<details>
+<summary>🔐 Authentication Endpoints</summary>
+
+- POST /api/users/ – Create user from Appwrite login  
+- POST /api/token/ – Obtain JWT token  
+- POST /api/token/refresh/ – Refresh token  
+- GET /api/users/{id}/ – Get user details  
+</details>  
+
+<details>
+<summary>💰 Wallet Endpoints (Squad API)</summary>
+
+- POST /api/wallet/create/ – Create a wallet for a user  
+- GET /api/wallet/{user_id}/ – Retrieve wallet balance  
+- POST /api/wallet/transfer/ – Transfer funds between wallets  
+</details>  
+
+<details>
+<summary>🏆 Quiz & Leaderboard Endpoints</summary>
+
+- POST /api/quizzes/ – Create a new quiz  
+- GET /api/quizzes/{quiz_id}/ – Retrieve quiz details  
+- POST /api/quiz/submit/ – Submit quiz answers  
+- GET /api/leaderboard/ – View top performers  
+</details>  
+
+<details>
+<summary>👨‍💼 Admin Endpoints</summary>
+
+- GET /api/admin/users/ – View all users  
+- GET /api/admin/winners/ – View quiz winners  
+- PATCH /api/admin/users/{id}/ban/ – Ban a user  
+</details>  
+
+---
+
+## 🛠️ **Tech Stack**  
+
+### 📱 Mobile App:  
+- **Framework:** React Native  
+- **UI:** TailwindCSS, Native Components  
+- **Auth:** Appwrite (Google Auth)  
+- **API:** Axios  
+- **State Management:** React Context API  
+
+### 🖥️ Backend API:  
+- **Framework:** Django Rest Framework  
+- **Database:** PostgreSQL  
+- **Auth:** JWT (Simple JWT)  
+- **External API:** Squad Wallet API  
+- **Docs:** Swagger / Postman  
+
+### 🧑‍💻 Admin Dashboard:  
+- **Framework:** React.js  
+- **UI Library:** TailwindCSS  
+- **Charts:** Recharts or Chart.js  
+- **API Handling:** Axios  
+
+---
+
+## 💾 **Development Environment Setup**  
+
+### 📱 Mobile App (React Native)  
 ```bash
 cd mobile-app
 npm install
 npm start
 ```
 
-### 🖥️ Backend (Django)
+### 🖥️ Backend (Django)  
 ```bash
 cd backend
 pip install -r requirements.txt
@@ -88,7 +151,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### 🧑‍💻 Admin Dashboard (React)
+### 🧑‍💻 Admin Dashboard (React)  
 ```bash
 cd admin-dashboard
 npm install
@@ -97,31 +160,56 @@ npm run dev
 
 ---
 
-## 🛠️ Tech Stack
+## 🧪 **Testing Plan**  
+### ✅ **Mobile App:**  
+- Test login (Google) flow  
+- Test wallet balance display  
+- Test quiz participation and submission  
 
-- **Mobile App:** React Native, TailwindCSS, Appwrite, Axios.
-- **Backend API:** Django Rest Framework, PostgreSQL, JWT.
-- **Admin Dashboard:** React.js, TailwindCSS, Axios.
+### ✅ **Backend:**  
+- Test API endpoints using **Postman**  
+- Test user creation, wallet creation, and leaderboard endpoints  
 
----
-
-## 🚀 Deployment Plan
-
-| Platform  | Service           |
-|-----------|------------------|
-| Backend   | Railway / Heroku |
-| Database  | Supabase / AWS RDS |
-| Mobile    | Play Store (Expo) |
-| Web       | Vercel / Netlify |
+### ✅ **Admin Dashboard:**  
+- Test user analytics display  
+- Test banning users and viewing winners  
 
 ---
 
-## 📌 Next Steps
-- [ ] Create GitHub repository.
-- [ ] Implement core MVP features.
-- [ ] Deploy backend and frontend.
-- [ ] Collect feedback for improvements.
+## 📝 **Timeline (1 Month)**  
+
+| Week | Task                          | Responsible      |
+|------|-------------------------------|------------------|
+| 1    | Set up repo & project structure | Akolade         |
+| 1    | Backend: User & Wallet APIs   | Justin & Ade    |
+| 2    | Mobile: Google Auth & User Profile | Akolade     |
+| 2    | Backend: Quiz endpoints       | Justin & Ade    |
+| 3    | Admin Dashboard (User list)   | Sultan          |
+| 3    | Mobile: Quiz & Leaderboard    | Akolade         |
+| 4    | Integration Testing           | All             |
+| 4    | Bug Fixing & Deployment       | All             |
 
 ---
 
-**🚀 Let's Build Something Great Together!** 💪🔥
+## 🚀 **Deployment Plan**  
+
+| Platform | Service             |
+|----------|---------------------|
+| Backend  | Heroku or Railway   |
+| Database | AWS RDS or Supabase |
+| Mobile   | Play Store (Expo)   |
+| Web      | Vercel or Netlify   |
+
+---
+
+## 📌 **Next Steps**  
+- [ ] **Create GitHub Repo:** student-companion-suite  
+- [ ] **Set Up CI/CD Pipelines** (GitHub Actions)  
+- [ ] **Share API Documentation** with Frontend Developers  
+
+---
+
+**🚀 Let’s Build Something Great Together!** 💪🔥  
+```
+
+This version includes the screens and theme colors while keeping everything structured. Let me know if you need any more adjustments! 🚀
