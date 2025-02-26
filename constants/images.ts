@@ -5,6 +5,7 @@ import QuizLobby from '@/assets/images/QuizLobby.png'
 import leaderboard from '@/assets/images/leaderboard.png'
 import livequiz from '@/assets/images/livequiz.png'
 import ClassReminder from '@/assets/images/ClassReminder.png'
+import appicon from '@/assets/images/icon.png'
 
 export default {
     returnIcon,
@@ -13,7 +14,6 @@ export default {
     QuizLobby,
     leaderboard,
     livequiz,
-    ClassReminder
-
-
+    ClassReminder,
+    appicon
 }
