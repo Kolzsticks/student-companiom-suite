@@ -30,7 +30,7 @@ const LoginScreen = () => {
 
             {/* Quizzy Text */}
             <Text className="text-red-500 text-6xl font-bold mt-10">
-              Quizzy
+              EduQuest
             </Text>
           </View>
         </View>

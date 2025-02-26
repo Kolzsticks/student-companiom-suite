@@ -11,24 +11,13 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import images from "@/constants/images";
 import { router } from "expo-router";
+import Backbutton from "@/components/backbutton";
 
 const SignIn = () => {
   return (
     <SafeAreaView className="flex-1 bg-gray-200 h-full p-8">
       {/* Top Section */}
-      <TouchableOpacity
-        onPress={() => {
-          router.back();
-        }}
-        className=""
-      >
-        <Image
-          source={images.returnIcon}
-          className="h-9 w-9"
-          resizeMode="contain"
-        />
-      </TouchableOpacity>
-
+      <Backbutton />
       {/* Middle Section */}
       <KeyboardAvoidingView
         behavior="padding" // Adjust behavior based on platform
