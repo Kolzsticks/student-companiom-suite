@@ -6,7 +6,7 @@ import {
   SafeAreaView,
   StatusBar
 } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+import Backbutton from '@/components/backbutton';
 
 const CircularProgress = ({ size, strokeWidth, percentage }: {size: any, strokeWidth: any, percentage: any}) => {
   const radius = (size - strokeWidth) / 2;
@@ -71,7 +71,7 @@ const QuizLobby = () => {
       
       {/* Header */}
       <View className="flex-row items-center justify-between mb-8">
-        <AntDesign name="arrowleft" size={24} color="black" />
+        <Backbutton  />
         <Text className="text-xl font-semibold text-center flex-1">Quiz Lobby</Text>
         <View className="w-6" />
       </View>
