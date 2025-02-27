@@ -39,17 +39,18 @@ const LoginScreen = () => {
         <View className="flex flex-col gap-10 mt-10 space-y-4">
           {/* Register Button */}
           <TouchableOpacity
-           onPress={() => {
-            router.push("/leaderboard");
-          }}
-          className="bg-red-500 rounded-full py-5 items-center">
+            onPress={() => {
+              router.push("/quizlobby");
+            }}
+            className="bg-red-500 rounded-full py-5 items-center"
+          >
             <Text className="text-white text-2xl font-bold">Register</Text>
           </TouchableOpacity>
 
           {/* Login Button */}
           <TouchableOpacity
             onPress={() => {
-              router.push("/sign-in");
+              router.push("/(root)/(main)");
             }}
             className="border-2 border-black rounded-full py-5 items-center"
           >

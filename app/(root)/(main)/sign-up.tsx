@@ -25,7 +25,7 @@ const SignIn = () => {
       >
         <View className="flex flex-col items-center gap-1 mt-10">
           <Text className="font-balloo2-bold text-2xl text-gray-800 text-center">
-            Login to your account
+            Create an account
           </Text>
           <Text className="font-balloo2-medium text-lg">
             Please Fill in your personal information
@@ -45,51 +45,23 @@ const SignIn = () => {
           <View className="relative">
             <TextInput className="border border-gray-500 rounded-[19px] h-[63px]" />
             <Text className="absolute top-[-12px] bg-gray-200 px-2 left-6 text-xl font-balloo2-medium">
+              Phone
+            </Text>
+          </View>
+          {/* Email Input */}
+          <View className="relative">
+            <TextInput className="border border-gray-500 rounded-[19px] h-[63px]" />
+            <Text className="absolute top-[-12px] bg-gray-200 px-2 left-6 text-xl font-balloo2-medium">
               Password
             </Text>
           </View>
 
-          {/* Forgot Password Text */}
-          <View className="flex flex-row justify-end">
-            <Text className="underline text-xl font-balloo2-medium">
-              Forgot Password?
+          {/* Password Input */}
+          <View className="relative">
+            <TextInput className="border border-gray-500 rounded-[19px] h-[63px]" />
+            <Text className="absolute top-[-12px] bg-gray-200 px-2 left-6 text-xl font-balloo2-medium">
+              Confirm Password
             </Text>
-          </View>
-
-          {/* Divider with "or" */}
-          <View className="relative flex items-center justify-center mb-8">
-            <View className="w-full h-[0.5px] bg-black"></View>
-            <Text className="font-inter-regular text-xl absolute top-[-15px] bg-gray-200 p-1">
-              or
-            </Text>
-          </View>
-
-          <View className="flex flex-row">
-            {/* Google Button */}
-            <View
-              className="flex flex-row items-center gap-2 border border-gray-600 rounded-[10px] p-3 flex-1 mr-2 overflow-visible"
-              style={{ borderRadius: 10 }}
-            >
-              <Image
-                source={images.google}
-                resizeMode="contain"
-                className="h-9 w-9"
-              />
-              <Text className="font-balloo2-medium">Google</Text>
-            </View>
-
-            {/* Facebook Button */}
-            <View
-              className="flex flex-row items-center gap-2 border border-gray-600 rounded-[10px] p-3 flex-1 ml-2 overflow-visible"
-              style={{ borderRadius: 10 }}
-            >
-              <Image
-                source={images.facebook}
-                resizeMode="contain"
-                className="h-9 w-9"
-              />
-              <Text className="font-balloo2-medium">Facebook</Text>
-            </View>
           </View>
         </View>
       </KeyboardAvoidingView>
@@ -98,14 +70,14 @@ const SignIn = () => {
 
       <View className="flex flex-col items-center justify-center gap-2 mb-5">
         <Text className="text-xl font-inter-medium">
-          Don't have an account?{" "}
-          <Link href="/sign-up" className="font-inter-bold">
-            Register
+          Already have an account?{" "}
+          <Link href="/sign-in" className="font-inter-bold">
+            Login
           </Link>
         </Text>
 
         <TouchableOpacity className="bg-red-600 p-5 rounded-[20px] flex items-center justify-center w-full">
-          <Text className="text-white">Login</Text>
+          <Text className="text-white">Register</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
